@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Macbaka — Authentic Nigerian food, beautifully served."
+    >
+
+    <title>Macbaka | Nigerian Food</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="nav-container">
+
+            <div class="brand-wrap">
+                <div class="brand-mark">✦</div>
+                <div class="brand-text">
+                    <span class="brand-name">MACBAKA</span>
+                    <span class="brand-tag">NIGERIAN CUISINE • PREMIUM EXPERIENCE</span>
+                </div>
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-left" id="navMenu">
+                <a href="#home" class="active">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reservation">Reservations</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a
+                    class="whatsapp-link"
+                    href="https://wa.me/2348063591838?text=Hello%20Macbaka%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+                <form class="search-form" id="searchForm" role="search">
+                    <input type="search" id="foodSearch" placeholder="Search dishes..." aria-label="Search food menu">
+                    <button type="button" class="clear-search" id="clearSearch" aria-label="Clear dish search">×</button>
+                    <button type="submit" class="search-button" aria-label="Search menu">⌕</button>
+                </form>
+                <button class="cart-button" id="cartButton">
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    AUTHENTIC NIGERIAN FLAVORS
+                </p>
+
+                <h1>
+                    Traditional Taste,
+                    <span>Modern Experience</span>
+                </h1>
+
+                <p class="hero-description">
+                    Savor the rich, bold flavors of Nigeria with our carefully crafted dishes, made from the finest ingredients.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">View Menu <span>→</span></a>
+                    <a href="#reservation" class="btn btn-outline">Make a Reservation</a>
+                </div>
+
+                <div class="hero-dots" aria-label="Hero pagination">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual" aria-label="Featured dish image">
+                <div class="dish-plate">
+                    <div class="dish-glow"></div>
+                </div>
+            </div>
+
+            <div class="hero-arrow hero-arrow-left">‹</div>
+            <div class="hero-arrow hero-arrow-right">›</div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO SECTION
+        ========================== -->
+
+        <section class="intro section-padding">
+
+            <div class="section-label">
+                <span>01</span>
+                <span>THE MACBAKA EXPERIENCE</span>
+            </div>
+
+            <div class="intro-content">
+
+                <h2>
+                    Traditional taste,
+                    <em>with soul.</em>
+                </h2>
+
+                <p>
+                    At Macbaka, we celebrate the real flavours of Nigeria:
+                    vibrant peppers, rich stews, fresh greens, and family recipes
+                    passed down through generations. Every dish brings comfort,
+                    celebration, and a sense of home.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MENU SECTION
+        ========================== -->
+
+        <section class="menu-section section-padding" id="menu">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    <span>02</span>
+                    <span>OUR MENU</span>
+                </div>
+
+                <h2>
+                    Signature
+                    <em>Nigerian plates.</em>
+                </h2>
+
+                <p>
+                    A menu inspired by everyday family tables and celebratory gatherings across Nigeria.
+                </p>
+
+            </div>
+
+
+            <!-- Categories -->
+
+            <div class="menu-categories" id="menuCategories">
+
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="rice">Rice Dishes</button>
+                <button class="category-btn" data-category="swallows">Swallows</button>
+                <button class="category-btn" data-category="soups">Soups</button>
+                <button class="category-btn" data-category="grills">Grills</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+
+            </div>
+
+            <div class="no-results" id="noResults">
+                No dishes match your search.
+            </div>
+
+            <p class="search-results-count" id="searchResultsCount" aria-live="polite"></p>
+
+            <div class="food-grid" id="foodGrid">
+
+                <article class="food-card" data-category="rice" data-name="Jollof Rice & Chicken" data-price="5000">
+                    <div class="food-image" style="--card-image: url('images ruth.jpg');">
+                        <div class="image-placeholder"><span>JOLLOF</span></div>
+                        <button class="add-cart" aria-label="Add Jollof Rice & Chicken to cart">+</button>
+                    </div>
+                    <div class="food-info">
+                        <div>
+                            <h3>Jollof Rice &amp; Chicken</h3>
+                            <p>Classic Nigerian jollof rice served with grilled chicken and plantain.</p>
+                        </div>
+                        <strong>₦5,000</strong>
+                    </div>
+                </article>
+
+                <article class="food-card" data-category="soups" data-name="Egusi Soup & Pounded Yam" data-price="5500">
+                    <div class="food-image" style="--card-image: url('images baka.jpg');">
+                        <div class="image-placeholder"><span>EGUSI</span></div>
+                        <button class="add-cart" aria-label="Add Egusi Soup & Pounded Yam to cart">+</button>
+                    </div>
+                    <div class="food-info">
+                        <div>
+                            <h3>Egusi Soup &amp; Pounded Yam</h3>
+                            <p>Rich egusi soup with your choice of meat, served with pounded yam.</p>
+                        </div>
+                        <strong>₦5,500</strong>
+                    </div>
+                </article>
+
+                <article class="food-card" data-category="rice" data-name="Fried Rice & Chicken" data-price="5000">
+                    <div class="food-image" style="--card-image: url('images eli.jpg');">
+                        <div class="image-placeholder"><span>FRIED RICE</span></div>
+                        <button class="add-cart" aria-label="Add Fried Rice & Chicken to cart">+</button>
+                    </div>
+                    <div class="food-info">
+                        <div>
+                            <h3>Fried Rice &amp; Chicken</h3>
+                            <p>A hearty mix of fresh vegetables, eggs and chicken.</p>
+                        </div>
+                        <strong>₦5,000</strong>
+                    </div>
+                </article>
+
+                <article class="food-card" data-category="grills" data-name="Suya" data-price="3500">
+                    <div class="food-image" style="--card-image: url('images 2.jpg');">
+                        <div class="image-placeholder"><span>SUYA</span></div>
+                        <button class="add-cart" aria-label="Add Suya to cart">+</button>
+                    </div>
+                    <div class="food-info">
+                        <div>
+                            <h3>Suya</h3>
+                            <p>Spicy, smoky, and irresistible. A true Nigerian favorite.</p>
+                        </div>
+                        <strong>₦3,500</strong>
+                    </div>
+                </article>
+
+                <article class="food-card" data-category="soups" data-name="Pepper Soup" data-price="4500">
+                    <div class="food-image" style="--card-image: url('download3.jpg');">
+                        <div class="image-placeholder"><span>PEPPER SOUP</span></div>
+                        <button class="add-cart" aria-label="Add Pepper Soup to cart">+</button>
+                    </div>
+                    <div class="food-info">
+                        <div>
+                            <h3>Pepper Soup</h3>
+                            <p>A hot and spicy traditional soup with your choice of meat or fish.</p>
+                        </div>
+                        <strong>₦4,500</strong>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+
+        <section
+            class="about-section section-padding"
+            id="about"
+        >
+
+            <div class="about-image">
+
+                <div
+                    class="image-placeholder large"
+                    style="--card-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80');"
+                >
+                    <span>MACBAKA</span>
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    <span>03</span>
+                    <span>OUR STORY</span>
+                </div>
+
+                <h2>
+                    More than
+                    <em>a meal.</em>
+                </h2>
+
+                <p>
+                    Macbaka was built around one simple idea:
+                    Nigerian food should be experienced with pride,
+                    warmth and intention.
+                </p>
+
+                <p>
+                    From the aroma of freshly prepared ofada rice to the
+                    deep richness of efo riro and amala, every meal carries
+                    a story of culture, family and celebration.
+                </p>
+
+                <div class="story-stats">
+                    <div>
+                        <strong>2019</strong>
+                        <span>Established</span>
+                    </div>
+                    <div>
+                        <strong>100%</strong>
+                        <span>Fresh ingredients</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Chef-crafted flavour</span>
+                    </div>
+                </div>
+
+                <a
+                    href="#contact"
+                    class="text-link"
+                >
+                    Discover our story →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GALLERY
+        ========================== -->
+
+        <section class="gallery-section section-padding">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    <span>04</span>
+                    <span>FROM OUR KITCHEN</span>
+                </div>
+
+                <h2>
+                    Food worth
+                    <em>remembering.</em>
+                </h2>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item tall">
+                    <div class="image-placeholder" style="--card-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80');">
+                        <span>FOOD</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="--card-image: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=80');">
+                        <span>FOOD</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="--card-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1000&q=80');">
+                        <span>FOOD</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item wide">
+                    <div class="image-placeholder" style="--card-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80');">
+                        <span>MACBAKA</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESERVATION
+        ========================== -->
+
+        <section
+            class="reservation-section section-padding"
+            id="reservation"
+        >
+
+            <div class="reservation-content">
+
+                <div class="section-label">
+                    <span>05</span>
+                    <span>RESERVATIONS</span>
+                </div>
+
+                <h2>
+                    Your table
+                    <em>awaits.</em>
+                </h2>
+
+                <p>
+                    Planning a dinner, celebration or simply
+                    looking for a great Nigerian meal?
+                    Reserve your table with us.
+                </p>
+
+
+                <form
+                    class="reservation-form"
+                    id="reservationForm"
+                >
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="guestName">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="guestName"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="guestPhone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="guestPhone"
+                                name="phone"
+                                placeholder="+234..."
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="reservationDate">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="reservationDate"
+                                name="date"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="reservationTime">
+                                Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="reservationTime"
+                                name="time"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="guests">
+                            Number of Guests
+                        </label>
+
+                        <select
+                            id="guests"
+                            name="guests"
+                            required
+                        >
+
+                            <option value="">
+                                Select guests
+                            </option>
+
+                            <option value="1">
+                                1 Guest
+                            </option>
+
+                            <option value="2">
+                                2 Guests
+                            </option>
+
+                            <option value="3">
+                                3 Guests
+                            </option>
+
+                            <option value="4">
+                                4 Guests
+                            </option>
+
+                            <option value="5">
+                                5 Guests
+                            </option>
+
+                            <option value="6+">
+                                6+ Guests
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Request Reservation
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            class="contact-section section-padding"
+            id="contact"
+        >
+
+            <div class="section-label">
+                <span>06</span>
+                <span>CONTACT</span>
+            </div>
+
+            <h2>
+                Come hungry.
+                <br>
+                <em>Leave happy.</em>
+            </h2>
+
+            <div class="contact-grid">
+
+                <div>
+                    <span>CALL</span>
+
+                    <a href="tel:+2348063591838">
+                        +234 806 359 1838
+                    </a>
+                </div>
+
+                <div>
+                    <span>WHATSAPP</span>
+
+                    <a
+                        href="https://wa.me/2348063591838?text=Hello%20Macbaka%2C%20I%20would%20like%20to%20place%20an%20order."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Chat with us
+                    </a>
+                </div>
+
+                <div>
+                    <span>EMAIL</span>
+
+                    <a href="mailto:hello@macbaka.com">
+                        hello@macbaka.com
+                    </a>
+                </div>
+
+                <div>
+                    <span>LOCATION</span>
+
+                    <p>
+                        Nigeria
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CART SIDEBAR
+    ========================== -->
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+    >
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button
+                id="closeCart"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    ₦0
+                </strong>
+
+            </div>
+
+            <button
+                class="btn btn-primary checkout-btn"
+                id="checkoutButton"
+            >
+                Order on WhatsApp
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Cart overlay -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+    ></div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            MACBAKA
+        </div>
+
+        <p>
+            Authentic Nigerian food.
+            Modern experience.
+        </p>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Macbaka.
+                All rights reserved.
+            </span>
+
+            <span>
+                Made with passion in Nigeria.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>s
